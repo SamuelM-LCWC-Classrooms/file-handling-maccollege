@@ -21,8 +21,8 @@ def task_2():
             data = num.split(",") #Distinguishing splits
             for i in range(len(user_food)): #Checking the amount of times for each food item requested
                 if user_food[i] == data[0]: #Checking if value in the list is equal to the first value of the row
-                    price = float(data[2].replace("\n", "")) #Checking the last value of each row
+                    price = float(data[2].replace("\n", "")) #Checking the last value of each row and removing the \n included in the value
                     price_total += price #Adding to total price
     price_total = round(price_total, 2) #Rounding to 2d.p.
     return price_total #Outputting total price
-#print(task_2())
+print(task_2())
